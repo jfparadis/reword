@@ -12,11 +12,11 @@ This plugin extends on similar functionality provided by the function translate(
 
 This implementation can also handle placeholders (eg: Hello %s) and can translate dates formats (eg: Today is %d).
 
-The language of the user is detected using the browser settings and stored in a cookie. The cooke can be altered by providing a 'lang' parameter in the url (eg: http://example.com?lang=fr).
+The language of the user is detected using the browser settings and stored in a cookie. The language can be changed by providing a 'lang' parameter in the url (eg: http://example.com?lang=fr). This changes the cookie, and persists even id the 'lang' parameter does not appear in subsequent urls.
 
-The list of supported languages is defined in languages.php, which allows to convert between language codes (sent by the browser 'Accept Language' header) and language strings used by Code Igniter.
+The list of supported languages is defined in languages.php, which allows to convert between language codes (sent by the browser 'Accept Language' header or by the 'lang' parameters) and language strings used by Code Igniter.
 
-The dictionaries are located in the 'language_path' folder (default /themes) defined in the configuration, in the given sites/language subfolder. The system also supports multiple language sets (default 'all').
+The dictionaries are located in the 'language_path' folder defined in the configuration (default /themes if not provided), in the given languages subfolder. The system also supports multisite and multiple language sets per language (default 'all').
 
 example (one file for all):
 /var/www/themes/languages/default_site/french/lang.all.php
@@ -26,7 +26,7 @@ example (one file for set='front', one for set='profile', the rest goes in 'all'
 /var/www/themes/languages/default_site/french/lang.profile.php
 /var/www/themes/languages/default_site/french/lang.all.php
 
-The language file must define a $lang associative array as follows:
+The language file must define a $lang associative array as follows.
 
 example: 
 
@@ -46,7 +46,7 @@ If navigating to example.com/?lang=fr:
 {exp:sk_reword text='%s search results for "%s"' string='25|Test'}<br />
 {exp:sk_reword text='Posted %d' format='%M %d, %Y' date='2010-01-01'}
 
-Renders as:
+Will render as (if using the set above):
 
 Bonjour
 Bonjour Mary
