@@ -1,9 +1,9 @@
 #Sk Reword - ExpressionEngine Plugin
 
-Version: 1.0.0
-Jean-Francois Paradis - http://github.com/skaimauve
-Copyright (c) 2012 Jean-Francois Paradis
-MIT License - please see LICENSE file included with this distribution
+Version: 1.0.0<br />
+Jean-Francois Paradis - http://github.com/skaimauve<br />
+Copyright (c) 2012 Jean-Francois Paradis<br />
+MIT License - please see LICENSE file included with this distribution<br />
 http://github.com/skaimauve/reword
 
 ##Introduction
